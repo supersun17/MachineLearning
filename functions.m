@@ -1,6 +1,4 @@
-function f1 = squareThisNumber(x);
-	f1 = x^2;
-endfunction;
-function f2 = getList(x1,x2);
-	f2 = x1:1:x2;
-endfunction;
+X = [1 1; 1 2; 1 3];
+y = [1; 2; 3];
+theta = [0; 1];
+j = customFunc.costFunctionJ(X,y,theta)
