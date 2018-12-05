@@ -1,0 +1,10 @@
+x1 = 0:0.01:1;
+y1 = sin(2 * pi * x1);
+plot(x1,y1);
+hold on;
+x2 = x1 * 1.5;
+y2 = cos(2 * pi * x2 + 0.5 * pi);
+plot(x2,y2);
+ylabel('units');
+xlabel('time');
+legend('sin','cos');
