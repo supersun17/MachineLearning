@@ -17,15 +17,16 @@ for iter = 1:num_iters
     %       of the cost function (computeCostMulti) and gradient here.
     %
 
+    thetaOrigin = theta;
 	for j = 1:size(X,2)
 		sum = 0;
 		for i = 1:size(X,1)
-			sum = sum + (X(i,:) * theta - y(i)) * X(i,j);
+			sum = sum + (X(i,:) * thetaOrigin - y(i)) * X(i,j);
 		end
-		theta(j) = theta(j) - alpha / m * sum;
+		theta(j) = thetaOrigin(j) - alpha / m * sum;
 	end
 
-    % ============================================================
+% ============================================================
 
     % Save the cost J in every iteration    
     J_history(iter) = computeCostMulti(X, y, theta);

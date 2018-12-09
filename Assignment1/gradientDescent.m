@@ -17,12 +17,13 @@ for iter = 1:num_iters
     %       of the cost function (computeCost) and gradient here.
     %
 
+    thetaOrigin = theta;
     for j = 1:size(theta,1)
 		sum = 0;
 		for i = 1:size(X,1)
-			sum = sum + (X(i,:) * theta - y(i)) * X(i,j);
+			sum = sum + (X(i,:) * thetaOrigin - y(i)) * X(i,j);
 		end
-		theta(j) = theta(j) - alpha / m * sum;
+		theta(j) = thetaOrigin(j) - alpha / m * sum;
     end
 
     % ============================================================
